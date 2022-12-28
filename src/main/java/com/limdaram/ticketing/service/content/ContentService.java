@@ -295,7 +295,7 @@ public class ContentService {
 
     private void removePosterFile(int contentId, String removePosterName) {
 //        System.out.println("포스터네임" + removePosterName);
-        String key = "prj1/board/" + contentId + "/" + removePosterName;
+        String key = "ticketing/" + contentId + "/" + removePosterName;
         DeleteObjectRequest deleteObjectRequest = DeleteObjectRequest.builder()
                 .bucket(bucketName)
                 .key(key)
@@ -304,7 +304,7 @@ public class ContentService {
     }
 
     private void removeDetailFile(int contentId, String removeDetailName) {
-        String key = "prj1/board/" + contentId + "/" + removeDetailName;
+        String key = "ticketing/" + contentId + "/" + removeDetailName;
         DeleteObjectRequest deleteObjectRequest = DeleteObjectRequest.builder()
                 .bucket(bucketName)
                 .key(key)
@@ -317,7 +317,7 @@ public class ContentService {
         try {
             // s3에 디테일 파일 저장
             // 키 생성
-            String key = "prj1/board/" + content.getContentId() + "/" + uuid;
+            String key = "ticketing/" + content.getContentId() + "/" + uuid;
 
             // putObjectRequest
             PutObjectRequest putObjectRequest = PutObjectRequest.builder()
@@ -343,7 +343,7 @@ public class ContentService {
         try {
             // s3에 파일 저장
             // 키 생성
-            String key = "prj1/board/" + content.getContentId() + "/" + posterFileName;
+            String key = "ticketing/" + content.getContentId() + "/" + posterFileName;
 
             // putObjectRequest
             PutObjectRequest putObjectRequest = PutObjectRequest.builder()

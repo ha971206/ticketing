@@ -4,12 +4,12 @@
 
 <%@ attribute name="active" %>
 
-<link rel="stylesheet" href="../css/all.min.css">
+<link rel="stylesheet" href="/static/css/all.min.css">
 <!-- https://fontawesome.com/ -->
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 <!-- https://fonts.google.com/ -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/templatemo-xtra-blog.css" rel="stylesheet">
+<link href="/ticketing/static/css/bootstrap.min.css" rel="stylesheet">
+<link href="/ticketing/static/css/templatemo-xtra-blog.css" rel="stylesheet">
 
 <style>
     .effect-lily img {
@@ -65,7 +65,7 @@
             <i class="fas fa-bars"></i>
         </button>
         <div style="margin-bottom: auto" class="tm-site-header">
-            <div class="mb-3 mx-auto tm-site-logo"><img src="/oo.ico"/></div>
+            <div class="mb-3 mx-auto tm-site-logo"><img src="/ticketing/static/oo.ico"/></div>
             <h1 class="text-center"><strong>A</strong> <strong>R</strong>aboza <strong>T</strong>eam</h1>
         </div>
         <div>
@@ -78,9 +78,9 @@
                         </p>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                             <div style="width: auto">
-                                <a style="color: white" class="font-weight-light" href="/customer/get?customerId=${username}">내정보</a> |
+                                <a style="color: white" class="font-weight-light" href="/ticketing/customer/get?customerId=${username}">내정보</a> |
 <%--                                <a style="color: white" class="font-weight-light" href="/customer/reservation">예약확인</a> --%>
-                                <a style="color: white" href="/logout">로그아웃</a>
+                                <a style="color: white" href="/ticketing/logout">로그아웃</a>
                             </div>
                         </div>
                 </div>
@@ -89,7 +89,7 @@
         <nav class="tm-nav" id="tm-nav">
             <ul>
                 <li class="tm-nav-item">
-                    <a href="/content/list" class="tm-nav-link">
+                    <a href="/ticketing/content/list" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         전시회
                     </a>
@@ -97,7 +97,7 @@
                 <sec:authentication property="name" var="username"/>
                 <c:if test="${'admin' == username}">
                     <li class="tm-nav-item">
-                        <a href="/content/register" class="tm-nav-link">
+                        <a href="/ticketing/content/register" class="tm-nav-link">
                             <i class="fas fa-pen"></i>
                             게시물 작성
                         </a>
@@ -106,7 +106,7 @@
                 <sec:authentication property="name" var="username"/>
                 <c:if test="${'admin' == username}">
                     <li class="tm-nav-item">
-                        <a href="/admin/customerManage" class="tm-nav-link">
+                        <a href="/ticketing/admin/customerManage" class="tm-nav-link">
                             <i class="fa-regular fa-address-card"></i>
                             회원 정보 관리
                         </a>
@@ -115,14 +115,14 @@
                 <sec:authentication property="name" var="username"/>
                 <c:if test="${'admin' == username}">
                     <li class="tm-nav-item">
-                        <a href="/admin/customerList" class="tm-nav-link">
+                        <a href="/ticketing/admin/customerList" class="tm-nav-link">
                             <i class="fa-solid fa-list-ul"></i>
                             회원 목록
                         </a>
                     </li>
                 </c:if>
                 <li class="tm-nav-item">
-                    <a href="/admin/about" class="tm-nav-link">
+                    <a href="/ticketing/admin/about" class="tm-nav-link">
                         <i class="fas fa-users"></i>
                         About
                     </a>
@@ -206,5 +206,5 @@
 
 </script>
 
-<script src="../js/jquery.min.js"></script>
-<script src="../js/templatemo-script.js"></script>
+<script src="/ticketing/static/js/jquery.min.js"></script>
+<script src="/ticketing/static/js/templatemo-script.js"></script>

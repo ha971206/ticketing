@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
           integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/templatemo-xtra-blog.css" rel="stylesheet">
+    <link href="/ticketing/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/ticketing/static/css/templatemo-xtra-blog.css" rel="stylesheet">
     <style>
         /*글씨체*/
         @font-face {
@@ -381,7 +381,7 @@
     })
 
     document.querySelector("#exitButton").addEventListener("click", function () {
-        window.location.href = "/customer/get?customerId=" + document.querySelector("#customerId").value;
+        window.location.href = "/ticketing/customer/get?customerId=" + document.querySelector("#customerId").value;
     })
 
 
@@ -528,7 +528,7 @@
     function goPopup() {
         // 주소검색을 수행할 팝업 페이지를 호출합니다.
         // 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://business.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
-        var pop = window.open("/customer/jusoPopup", "pop", "width=570,height=420, scrollbars=yes, resizable=yes");
+        var pop = window.open("/ticketing/customer/jusoPopup", "pop", "width=570,height=420, scrollbars=yes, resizable=yes");
 
         // 모바일 웹인 경우, 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://business.juso.go.kr/addrlink/addrMobileLinkUrl.do)를 호출하게 됩니다.
         //var pop = window.open("/popup/jusoPopup.jsp","pop","scrollbars=yes, resizable=yes");

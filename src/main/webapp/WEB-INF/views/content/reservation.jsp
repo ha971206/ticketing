@@ -377,49 +377,6 @@
                 }
 
 
-                // if (today.getFullYear() == startYear) { // 시작연도와 같으면서
-                //     if (nowMonth < realMonth) {         // 현재 달보다 작은 경우
-                //         noCount += 1;
-                //     } else if (nowMonth == realMonth) { // 현재 달과 같은 경우
-                //         if (i < startDay) {
-                //             noCount += 1;
-                //         }
-                //     }
-                // }
-                //
-                // // else
-                // if (today.getFullYear() > endYear) {            // 끝나는 연도보다 클 경우
-                //     noCount += 1;
-                // } else if (today.getFullYear() == endYear) {           // 끝나는 연도랑 같으면서
-                //     if (nowMonth > endMonth) {                        // 끝나는 달보다 클 경우
-                //         noCount += 1;
-                //     } else if (nowMonth == endMonth) {               // 끝나는 달과 같을 경우
-                //         if (i > endDay) {                           // 끝나는 일보다 클 경우
-                //             noCount += 1;
-                //         }
-                //     }
-                // }
-                // else if (today.getFullYear() < startYear) {       // 시작하는 연도보다 작을 경우
-                //     if (nowMonth == startMonth) {              // 시작하는 달과 같은 경우
-                //         if (i < startDay) {                         // 시작하는 일보다 작은 경우
-                //             noCount += 1;
-                //         }
-                //     // } else if (nowMonth < startMonth) {
-                //     //     noCount += 1;
-                //     // } else if (nowMonth > startMonth) {
-                //     //         // noCount = 0;
-                //     }
-                // }
-
-
-
-                // } && today.getMonth() >= endMonth && i >= endDay ) {
-                //     noCount+= 1;
-
-                <%--const contentStartDate = ${content.contentStartDate};--%>
-                <%--const contentEndDate = ${content.contentEndDate};--%>
-                <%--console.log("startDate: " + contentStartDate + "EndDate: " + contentEndDate);--%>
-
                 // 예약불가일 예외처리---------------------- ------------
                 if (noCount > 0) {
                     // noCount가 1이상이면 배경 회색으로, 글자색도 연한 검정으로 변경
@@ -461,29 +418,6 @@
                 }
             }
 
-            // //예약이 가득찬 날인 경우 cell 비활성화 및 색상 변경
-            // let checkMonth = thisMonth(nowMonth, realMonth);
-            // let fullDate = [];
-            // // fullDate는 지금 만드는 달의 날짜중 예약이 꽉 찬 날을 int로 보유함
-            // // 위에서 구해뒀던 monthEquals를 사용해 달에 알맞은 정보를 담은 Array를 사용하기 위함
-            // if (checkMonth == 0) {
-            //     fullDate = thisMonthFullDateList;
-            // }
-            // if (checkMonth == 1) {
-            //     fullDate = nextMonthFullDateList;
-            // }
-            // // fullDate를 순차탐색해 해당하는 날짜의 id를 가진 cell을 호출
-            // for (i = 0; i < fullDate.length; i++) {
-            //     console.log("꽉 찬날 : " + fullDate[i]);
-            //     cell = document.getElementById(fullDate[i]);
-            //     console.log("꽉 찬날 : " + cell.innerHTML);
-            //     // 배경색과 글자색을 예약불가일과 동일하게 변경
-            //     cell.style.backgroundColor = "#E0E0E0";
-            //     cell.style.color = '#C6C6C6';
-            //     // 클릭이벤트 함수를 빈 함수로 덮어씌워 클릭이벤트를 초기화
-            //     cell.onclick = function () {
-            //     };
-            // }
 
             // 달력의 마지막 날 뒤 빈칸 행으로 채우기
             if (cnt % 7 != 0) {

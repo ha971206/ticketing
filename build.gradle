@@ -5,6 +5,13 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
+//bootWar{
+//    archiveFileName = "ROOT.war"
+//}
+//
+//bootWar.enabled = false
+//war.enabled = true
+
 group = 'com.limdaram'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -40,7 +47,7 @@ dependencies {
 
 
     // https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper
-    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    providedCompile 'org.apache.tomcat.embed:tomcat-embed-jasper'
     // https://mvnrepository.com/artifact/javax.servlet/jstl
     implementation 'javax.servlet:jstl'
 
